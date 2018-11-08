@@ -1,8 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:id="@+id/icon_waage"
+        android:layout_width="114dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Gewicht"
+        app:layout_constraintEnd_toStartOf="@+id/txt_Größe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/waage_fertig" />
+
+    <ImageView
+        android:id="@+id/icon_lineal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/lineal" />
+
+    <ImageView
+        android:id="@+id/baby_icon"
+        android:layout_width="114dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/icon_waage"
+        app:layout_constraintEnd_toStartOf="@+id/txt_Größe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/baby_babycheck" />
 
     <SeekBar
         android:id="@+id/seekBar"
@@ -18,7 +58,89 @@
         android:scaleX="3"
         android:scaleY="3"
         android:scrollX="0dp"
-        android:scrollbarStyle="insideInset" />
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:scrollbarStyle="insideOverlay" />
+
+    <TextView
+        android:id="@+id/txt_Größe"
+        android:layout_width="159dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="288dp"
+        android:text="@string/string_Groeße"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_Gewicht"
+        android:layout_width="199dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/string_Gewicht"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_alter"
+        android:layout_width="100dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/string_Geburt"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_geschlecht"
+        style="@android:style/Animation.Activity"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="8dp"
+        android:scrollbarStyle="insideInset"
+        android:shadowColor="@color/green"
+        android:text="@string/string_Junge"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHighlight="@color/green"
+        android:textColorHint="@color/green"
+        android:textColorLink="@color/green"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:scrollbarStyle="outsideInset" />
+
+    <TextView
+        android:id="@+id/txt_maedchen"
+        android:layout_width="74dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/string_Maedchen"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/switch_geschlecht"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>

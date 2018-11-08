@@ -3,4 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_references">Referenzen</string>
     <string name="title_diary">Tagebuch</string>
+
+    <string name="string_Groeße">Größe</string>
+    <string name="string_Gewicht">Gewicht</string>
+    <string name="string_Geburt">Geburt</string>
+    <string name="string_Junge">Junge</string>
+    <string name="string_Maedchen">Mädchen</string>
 </resources>
