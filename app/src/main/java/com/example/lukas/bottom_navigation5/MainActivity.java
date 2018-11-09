@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
 //--------------------------------------Aktion beim anklicken von Einstellungen
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-       Intent settings = new Intent(this, SettingsActivity.class); //neuer Intent
-       startActivity(settings); //activity aufmachen
+     //  Intent settings = new Intent(this, SettingsActivity.class); //neuer Intent
+      // startActivity(settings); //activity aufmachen
         return super.onOptionsItemSelected(item);
     }
 
