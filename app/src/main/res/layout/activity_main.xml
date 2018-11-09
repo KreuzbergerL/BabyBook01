@@ -16,7 +16,10 @@
 
     <!-- layout_above ... das frame layout soll nur bis zur oberen Grenze des navigations bars gehen-->
 
-
+<include
+    layout = "@layout/toolbar01"
+    android:id="@+id/toolbar01"
+    />
 
     
     <android.support.design.widget.BottomNavigationView

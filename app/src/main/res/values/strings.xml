@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Bottom_navigation5</string>
+    <string name="app_name">BabyBook</string>
     <string name="title_home">Home</string>
     <string name="title_references">Referenzen</string>
     <string name="title_diary">Tagebuch</string>
+    <string name="einstellungen">Einstellungen</string>
 
     <string name="string_Groeße">Größe</string>
     <string name="string_Gewicht">Gewicht</string>
