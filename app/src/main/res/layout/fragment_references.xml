@@ -44,6 +44,8 @@
         app:srcCompat="@mipmap/baby_babycheck" />
 
     <SeekBar
+        android:thumb="@color/green"
+        android:progressTint="@color/green"
         android:id="@+id/seekBar"
         style="@android:style/Animation"
         android:layout_width="115dp"
@@ -81,7 +83,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/string_Gewicht"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
@@ -122,6 +124,7 @@
         android:textColorHint="@color/green"
         android:textColorLink="@color/green"
         android:textStyle="bold"
+        android:thumbTint="@color/green"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:scrollbarStyle="outsideInset" />

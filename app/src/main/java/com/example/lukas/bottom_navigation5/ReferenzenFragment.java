@@ -1,5 +1,6 @@
 package com.example.lukas.bottom_navigation5;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -49,6 +50,7 @@ public class ReferenzenFragment extends Fragment {
         switch_Geschlecht = (Switch) view.findViewById(R.id.switch_geschlecht);
 
         seekbar = (SeekBar) view.findViewById(R.id.seekBar);
+
 
 
         text_gewicht = (TextView) view.findViewById(R.id.txt_Gewicht);
