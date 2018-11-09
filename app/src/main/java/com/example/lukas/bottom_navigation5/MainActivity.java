@@ -1,5 +1,6 @@
 package com.example.lukas.bottom_navigation5;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -28,16 +29,18 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.navigation);     //Von mir hinzugefügt
         bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
-
+//---------------------Aufmachen des Einstellungen Buttons beim anklicken
     @Override
     public boolean onCreateOptionsMenu(Menu menu1) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu1, menu1);
         return super.onCreateOptionsMenu(menu1);
     }
-
+//--------------------------------------Aktion beim anklicken von Einstellungen
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+       Intent settings = new Intent(this, SettingsActivity.class); //neuer Intent
+       startActivity(settings); //activity aufmachen
         return super.onOptionsItemSelected(item);
     }
 
