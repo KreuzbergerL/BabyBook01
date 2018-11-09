@@ -7,10 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import java.util.zip.Inflater;
 
 public class ReferenzenFragment extends Fragment {
 
@@ -38,6 +41,111 @@ public class ReferenzenFragment extends Fragment {
     @Override
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_references, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_references, container, false);
+
+
+
+        switch_Geschlecht = (Switch) view.findViewById(R.id.switch_geschlecht);
+
+        seekbar = (SeekBar) view.findViewById(R.id.seekBar);
+
+
+        text_gewicht = (TextView) view.findViewById(R.id.txt_Gewicht);
+        text_groeße = (TextView) view.findViewById(R.id.txt_Größe);
+        text_alter = (TextView) view.findViewById(R.id.txt_alter);
+        text_maedcchen = (TextView) view.findViewById(R.id.txt_maedchen);
+
+        icon = (ImageView) view.findViewById(R.id.baby_icon);
+
+
+        seekbar.setMax(60);             // Das Maximum der SeekBar sind 60 Monate
+        seekbar.setProgress(progress);
+        seekbar.setX(0);
+        // Startwert is bei 0
+
+        text_gewicht.setText(gewicht_Jungen[progress][1] + " - " + gewicht_Jungen[progress][2] + " kg");
+        text_groeße.setText(groeße_Jungen[progress][1] + " - " + groeße_Jungen[progress][2] + " cm");
+
+        text_maedcchen.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+        switch_Geschlecht.setTextColor(getResources().getColor(R.color.green));
+
+        icon.getLayoutParams().height =  300;
+        icon.getLayoutParams().width =  300;
+
+
+        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {              //Ändert sich was an der Seekbar?
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean fromUser) {
+                progress = i;
+
+                if (progress == 0) {
+                    text_alter.setText("Geburt");
+                } else {
+                    text_alter.setText(progress + " Monate");
+                }
+
+                //Welcher der beiden RadioButton ist momentan aktiv
+                if(switch_Geschlecht.isChecked()) {
+                    text_gewicht.setText(gewicht_Maedchen[progress][1] + " - " + gewicht_Maedchen[progress][2] + " kg");
+                    text_groeße.setText(groeße_Maedchen[progress][1] + " - " + groeße_Maedchen[progress][2] + " cm");
+
+                    text_maedcchen.setTextColor(getResources().getColor(R.color.green));
+                    switch_Geschlecht.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                }
+
+                else{
+                    text_gewicht.setText(gewicht_Jungen[progress][1] + " - " + gewicht_Jungen[progress][2] + " kg");
+                    text_groeße.setText(groeße_Jungen[progress][1] + " - " + groeße_Jungen[progress][2] + " cm");
+
+                    text_maedcchen.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                    switch_Geschlecht.setTextColor(getResources().getColor(R.color.green));
+                }
+
+                icon.getLayoutParams().height = ( 3 * i ) + 300;
+                icon.getLayoutParams().width = ( 3 * i ) + 300;
+                icon.requestLayout();
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        switch_Geschlecht.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if(switch_Geschlecht.isChecked()) {
+                    text_gewicht.setText(gewicht_Maedchen[progress][1] + " - " + gewicht_Maedchen[progress][2] + " kg");
+                    text_groeße.setText(groeße_Maedchen[progress][1] + " - " + groeße_Maedchen[progress][2] + " cm");
+
+                    text_maedcchen.setTextColor(getResources().getColor(R.color.green));
+                    switch_Geschlecht.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                }
+
+                else{
+                    text_gewicht.setText(gewicht_Jungen[progress][1] + " - " + gewicht_Jungen[progress][2] + " kg");
+                    text_groeße.setText(groeße_Jungen[progress][1] + " - " + groeße_Jungen[progress][2] + " cm");
+
+                    text_maedcchen.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                    switch_Geschlecht.setTextColor(getResources().getColor(R.color.green));
+                }
+
+            }
+        });
+
+        return view;
+
     }
+
+
 }
+
