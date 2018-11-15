@@ -37,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
        Intent einstellungen = new Intent(this, EinstellungenActivity.class); //neuer Intent
-       startActivity(einstellungen); //activity aufmachen
+       startActivity(einstellungen); //activity aufmachen*/
+
+    /*    Fragment selectedFragment = new EinstellungenFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();*/
         return super.onOptionsItemSelected(item);
     }
 

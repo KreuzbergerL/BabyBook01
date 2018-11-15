@@ -17,12 +17,12 @@ public class EinstellungenActivity extends AppCompatActivity {/*
     private static final String TAG = "EinstellungenActivity";
 
     private TextView mDisplayDate;
-    private DatePickerDialog.OnDateSetListener mDateSetListener;
+    private DatePickerDialog.OnDateSetListener mDateSetListener; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);/*
         mDisplayDate = (TextView) findViewById(R.id.tvDate);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
@@ -52,9 +52,9 @@ public class EinstellungenActivity extends AppCompatActivity {/*
                 String date = month + "/" + day + "/" + year;
                 mDisplayDate.setText(date);
             }
-        };
+        };*/
     }
-*/
+
 }
 
 
