@@ -7,12 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".EinstellungenActivity">
 
+    <include
+        layout = "@layout/toolbar01"
+        android:id="@+id/toolbar01"
+        />
+
     <TextView
+        android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/string_insertDate"
-        android:id="@+id/tvDate"
-        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:textSize="30sp"/>
+        android:layout_marginTop="250dp"
+        android:hint="@string/string_insertDate"
+        android:textSize="30sp" />
 </RelativeLayout>
