@@ -11,9 +11,7 @@
         android:layout_width="114dp"
         android:layout_height="85dp"
         android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/txt_Gewicht"
         app:layout_constraintEnd_toStartOf="@+id/txt_Größe"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,11 +19,11 @@
 
     <ImageView
         android:id="@+id/icon_lineal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
+        android:layout_width="39dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Größe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/lineal" />
@@ -35,16 +33,14 @@
         android:layout_width="114dp"
         android:layout_height="147dp"
         android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/icon_waage"
         app:layout_constraintEnd_toStartOf="@+id/txt_Größe"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/baby_babycheck" />
 
     <SeekBar
-        android:thumb="@color/green"
+        android:thumbTint="@color/green"
         android:progressTint="@color/green"
         android:id="@+id/seekBar"
         style="@android:style/Animation"
@@ -67,15 +63,16 @@
 
     <TextView
         android:id="@+id/txt_Größe"
-        android:layout_width="140dp"
+        android:layout_width="160dp"
         android:layout_height="30dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="270dp"
         android:text="@string/string_Groeße"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/txt_Gewicht"
@@ -113,9 +110,8 @@
         style="@android:style/Animation.Activity"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="46dp"
         android:scrollbarStyle="insideInset"
         android:shadowColor="@color/green"
         android:text="@string/string_Junge"
@@ -134,8 +130,7 @@
         android:layout_width="74dp"
         android:layout_height="35dp"
         android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="62dp"
         android:text="@string/string_Maedchen"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimaryDark"
