@@ -10,4 +10,7 @@
     <string name="string_Geburt">Geburt</string>
     <string name="string_Junge">Junge</string>
     <string name="string_Maedchen">Mädchen</string>
+    <string name="title_activity_settings">Settings</string>
+
+
 </resources>

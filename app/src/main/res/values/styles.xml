@@ -9,7 +9,7 @@
     </style>
 
     <style name="myCustomPupUpStyle" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/green</item>
         <item name="overlapAnchor">false</item>
         <item name="android:dropDownVerticalOffset">-4dp</item>
 
