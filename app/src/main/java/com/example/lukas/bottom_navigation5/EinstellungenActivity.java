@@ -12,17 +12,30 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class EinstellungenActivity extends AppCompatActivity {/*
+public class EinstellungenActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_einstellungen);
+
+    /*
+
+
 
     private static final String TAG = "EinstellungenActivity";
 
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener; */
-
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);/*
+        setContentView(R.layout.activity_einstellungen);
+        */
+
+
+        /*
         mDisplayDate = (TextView) findViewById(R.id.tvDate);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
