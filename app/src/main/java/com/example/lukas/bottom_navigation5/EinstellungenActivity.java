@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class EinstellungenActivity extends AppCompatActivity {
+public class EinstellungenActivity extends AppCompatActivity {/*
 
     private static final String TAG = "EinstellungenActivity";
 
@@ -54,6 +54,7 @@ public class EinstellungenActivity extends AppCompatActivity {
             }
         };
     }
+*/
 }
 
 

@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Select Date"
+        android:hint="@string/string_insertDate"
         android:id="@+id/tvDate"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
