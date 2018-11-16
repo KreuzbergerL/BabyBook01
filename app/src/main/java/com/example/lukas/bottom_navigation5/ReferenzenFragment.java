@@ -72,8 +72,8 @@ public class ReferenzenFragment extends Fragment {
         text_maedcchen.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
         switch_Geschlecht.setTextColor(getResources().getColor(R.color.green));
 
-        icon.getLayoutParams().height =  300;
-        icon.getLayoutParams().width =  300;
+        icon.getLayoutParams().height =  200;
+        icon.getLayoutParams().width =  200;
 
 
         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {              //Ändert sich was an der Seekbar?
@@ -104,8 +104,8 @@ public class ReferenzenFragment extends Fragment {
                     switch_Geschlecht.setTextColor(getResources().getColor(R.color.green));
                 }
 
-                icon.getLayoutParams().height = ( 2 * i ) + 300;
-                icon.getLayoutParams().width = ( 2 * i ) + 300;
+                icon.getLayoutParams().height = ( 2 * i ) + 200;
+                icon.getLayoutParams().width = ( 2 * i ) + 200;
                 icon.requestLayout();
 
             }
