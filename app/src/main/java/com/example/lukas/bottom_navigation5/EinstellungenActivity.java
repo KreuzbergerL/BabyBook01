@@ -17,7 +17,8 @@ public class EinstellungenActivity extends AppCompatActivity {
 
     private static final String TAG = "EinstellungenActivity";
 
-    private TextView mDisplayDate;
+    private TextView mDisplayDate;  // vorher ist das Datum ja bei der gleichen Textview angezeigt worden, wo man auch draufgeklickt hat
+    private TextView DatumsAnzeige; //Jetzt wird das Datum an einer zweiten Textview angezeigt
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
     @Override
@@ -25,7 +26,7 @@ public class EinstellungenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_einstellungen);
 
-
+        DatumsAnzeige = (TextView) findViewById(R.id.date_display);
         mDisplayDate = (TextView) findViewById(R.id.tvDate);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
@@ -53,11 +54,10 @@ public class EinstellungenActivity extends AppCompatActivity {
                 Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
                 String date = month + "/" + day + "/" + year;
-                mDisplayDate.setText(date);
+               DatumsAnzeige.setText(date);
             }
         };
     }
-
 }
 
 

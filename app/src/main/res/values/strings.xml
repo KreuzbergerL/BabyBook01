@@ -12,6 +12,7 @@
     <string name="string_Maedchen">Mädchen</string>
     <string name="title_activity_settings">Settings</string>
     <string name="string_insertDate">Geburtstermin eingeben</string>
+    <string name="string_datumsanzeige"></string>
 
 
 </resources>
