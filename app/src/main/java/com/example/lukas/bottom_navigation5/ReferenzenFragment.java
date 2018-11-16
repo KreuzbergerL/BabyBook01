@@ -87,7 +87,7 @@ public class ReferenzenFragment extends Fragment {
                     text_alter.setText(progress + " Monate");
                 }
 
-                //Welcher der beiden RadioButton ist momentan aktiv
+                //Welches Geschlecht ist momentan aktiv
                 if(switch_Geschlecht.isChecked()) {
                     text_gewicht.setText(gewicht_Maedchen[progress][1] + " - " + gewicht_Maedchen[progress][2] + " kg");
                     text_groeße.setText(groeße_Maedchen[progress][1] + " - " + groeße_Maedchen[progress][2] + " cm");
@@ -143,6 +143,8 @@ public class ReferenzenFragment extends Fragment {
 
             }
         });
+
+
 
         return view;
 
