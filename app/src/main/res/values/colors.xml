@@ -12,5 +12,6 @@
     <color name="orange">#ffa500</color>
     <color name="blue">#5cacee</color>
     <color name="ToolBarGreen">#009166</color>
+    <color name="EditTextBackgroung">#dcdcdc</color>
 
 </resources>

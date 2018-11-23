@@ -10,10 +10,10 @@
         android:id="@+id/icon_waage"
         android:layout_width="114dp"
         android:layout_height="85dp"
-        android:layout_marginStart="54dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/txt_Gewicht"
-        app:layout_constraintEnd_toStartOf="@+id/txt_Größe"
+        app:layout_constraintEnd_toStartOf="@+id/icon_lineal"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/waage_fertig" />
 
@@ -21,82 +21,76 @@
         android:id="@+id/icon_lineal"
         android:layout_width="39dp"
         android:layout_height="158dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_Größe"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/lineal" />
 
     <ImageView
         android:id="@+id/baby_icon"
-        android:layout_width="114dp"
-        android:layout_height="147dp"
-        android:layout_marginStart="54dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/icon_waage"
-        app:layout_constraintEnd_toStartOf="@+id/txt_Größe"
+        app:layout_constraintEnd_toStartOf="@+id/icon_lineal"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/baby_babycheck" />
 
     <SeekBar
-        android:thumbTint="@color/green"
-        android:progressTint="@color/green"
         android:id="@+id/seekBar"
-        style="@android:style/Animation"
         android:layout_width="115dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="88dp"
+        android:progressTint="@color/green"
         android:rotation="0"
         android:scaleX="3"
         android:scaleY="3"
         android:scrollX="0dp"
         android:scrollbarStyle="insideInset"
+        android:thumbTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:scrollbarStyle="insideOverlay" />
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txt_Größe"
-        android:layout_width="160dp"
-        android:layout_height="30dp"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="270dp"
         android:text="@string/string_Groeße"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_lineal" />
 
     <TextView
         android:id="@+id/txt_Gewicht"
-        android:layout_width="199dp"
+        android:layout_width="146dp"
         android:layout_height="40dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/string_Gewicht"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintBottom_toTopOf="@+id/txt_alter"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txt_alter"
-        android:layout_width="100dp"
-        android:layout_height="26dp"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="14dp"
         android:text="@string/string_Geburt"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
@@ -107,11 +101,10 @@
 
     <Switch
         android:id="@+id/switch_geschlecht"
-        style="@android:style/Animation.Activity"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="48dp"
         android:scrollbarStyle="insideInset"
         android:shadowColor="@color/green"
         android:text="@string/string_Junge"
@@ -122,15 +115,14 @@
         android:textStyle="bold"
         android:thumbTint="@color/green"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:scrollbarStyle="outsideInset" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_maedchen"
-        android:layout_width="74dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="62dp"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
         android:text="@string/string_Maedchen"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimaryDark"
@@ -139,5 +131,4 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
-    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
