@@ -1,5 +1,6 @@
 package com.example.lukas.bottom_navigation5;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,22 +20,33 @@ import com.example.lukas.bottom_navigation5.*;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    Activity context = this;
     public TextView vDisplay;
     public Button button;
+    public String Datum;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         vDisplay = (TextView) findViewById(R.id.textView2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar01);
         button =(Button) findViewById(R.id.button);
         setSupportActionBar(toolbar);
 
-        BottomNavigationView bottomNav = findViewById(R.id.navigation);     //Von mir hinzugefügt
+        BottomNavigationView bottomNav = findViewById(R.id.navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Datum = new PrefManagerActivity(v.getContext()).getBirthDate();
+                vDisplay.setText(Datum);
+            }
+        });
 
 
     }
@@ -80,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 //-------------------------------------Button Onclick----------------------------------------------
+
 
 
 

@@ -30,6 +30,8 @@ public class DiaryFragment extends Fragment implements View.OnClickListener {
     public CalendarView calender;
     public EditText txt_Tagebucheintrag;
     public Button btn_tagebucheintragerstellen;
+    Context context;
+
 
     @Nullable
     @Override
@@ -115,7 +117,7 @@ public class DiaryFragment extends Fragment implements View.OnClickListener {
 
 
             ////////// Wenn ein bereits bestehender Eintrag ohne jeglicher Bearbeitung  gespeichert werden soll, wirde der Benutzer zur Bearbeitung ersucht //////////
-            if(txt_Tagebucheintrag.getText().toString().matches( new PrefManager(DiaryFragment.this).getEintrag(calenderDay, calenderMonth, calenderYear)))
+            if(txt_Tagebucheintrag.getText().toString().matches( new PrefManager(this).getEintrag(calenderDay, calenderMonth, calenderYear)))
             {
                 Toast msg = Toast.makeText(getContext(), "Zunächst Tagebucheintrag für den " + calenderDay + "." + calenderMonth + "." + calenderYear + " bearbeiten.", Toast.LENGTH_SHORT);
                 msg.setGravity(Gravity.BOTTOM, msg.getXOffset()/2, msg.getYOffset()/2);
