@@ -64,7 +64,7 @@ public class EinstellungenActivity extends AppCompatActivity {
                 Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
                 date = month + "/" + day + "/" + year;
-               save(date);
+               save(day, month, year);
                DatumsAnzeige.setText(date);
             }
 
@@ -74,9 +74,9 @@ public class EinstellungenActivity extends AppCompatActivity {
 
     }
 
-public void save(String date)
+public void save(int day, int month, int year)
 {
-    new PrefManagerActivity(this).SaveBirthDate(date);
+    new PrefManagerActivity(this).SaveBirthDate(day, month, year);
 }
 
 

@@ -23,32 +23,24 @@ public class MainActivity extends AppCompatActivity {
     Activity context = this;
     public TextView vDisplay;
     public Button button;
-    public String Datum;
+    public int day;
+    public int month;
+    public int year;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-        vDisplay = (TextView) findViewById(R.id.textView2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar01);
-        button =(Button) findViewById(R.id.button);
         setSupportActionBar(toolbar);
-
         BottomNavigationView bottomNav = findViewById(R.id.navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                Datum = new PrefManagerActivity(v.getContext()).getBirthDate();
-                vDisplay.setText(Datum);
-            }
-        });
-
-
+        ////////////////////////////////////////////////////öffnet HomeFragment beim Öffnen der App///////////////////////////////////////
+        Fragment fragment = new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 //---------------------Aufmachen des Einstellungen Buttons beim anklicken
     @Override
@@ -70,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             Fragment selectedFragment = null;

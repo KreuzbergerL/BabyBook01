@@ -9,49 +9,49 @@
 
     <FrameLayout
         android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above = "@id/navigation"
-        >
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@id/navigation"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar01">
 
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_gravity="center"
-            android:textSize="30sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hallo" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+        <include
+            android:id="@+id/include"
+            layout="@layout/fragment_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_container"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_container"
+            app:layout_constraintStart_toStartOf="@+id/fragment_container"
+            app:layout_constraintTop_toTopOf="@+id/fragment_container" />
 
     </FrameLayout>
 
     <!-- layout_above ... das frame layout soll nur bis zur oberen Grenze des navigations bars gehen-->
 
-<include
-    layout = "@layout/toolbar01"
-    android:id="@+id/toolbar01"
-    />
+    <include
+        android:id="@+id/toolbar01"
+        layout="@layout/toolbar01"
 
-    
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
+        android:layout_height="52dp"
         android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
         app:menu="@menu/navigation" />
 
 </android.support.constraint.ConstraintLayout>
