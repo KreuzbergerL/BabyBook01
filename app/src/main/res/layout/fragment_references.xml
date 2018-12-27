@@ -3,49 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
 
 
     <ImageView
         android:id="@+id/icon_waage"
-        android:layout_width="114dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_Gewicht"
-        app:layout_constraintEnd_toStartOf="@+id/icon_lineal"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="59dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_alter"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
         app:srcCompat="@mipmap/waage_fertig" />
 
     <ImageView
         android:id="@+id/icon_lineal"
-        android:layout_width="39dp"
-        android:layout_height="158dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/lineal" />
+        android:layout_width="21dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/icon_waage"
+        app:layout_constraintStart_toStartOf="@+id/icon_waage"
+        app:srcCompat="@mipmap/lineal2" />
 
     <ImageView
         android:id="@+id/baby_icon"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/icon_waage"
-        app:layout_constraintEnd_toStartOf="@+id/icon_lineal"
-        app:layout_constraintHorizontal_bias="0.504"
+        android:layout_width="154dp"
+        android:layout_height="169dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Größe"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/baby_babycheck" />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="115dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="88dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
         android:progressTint="@color/green"
         android:rotation="0"
         android:scaleX="3"
@@ -55,56 +51,52 @@
         android:thumbTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txt_Größe"
-        android:layout_width="150dp"
+        android:layout_width="237dp"
         android:layout_height="41dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/string_Groeße"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon_lineal" />
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Gewicht"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="@+id/icon_lineal" />
 
     <TextView
         android:id="@+id/txt_Gewicht"
-        android:layout_width="146dp"
+        android:layout_width="243dp"
         android:layout_height="40dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/string_Gewicht"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/txt_alter"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="@+id/icon_waage" />
 
     <TextView
         android:id="@+id/txt_alter"
-        android:layout_width="166dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
         android:text="@string/string_Geburt"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar" />
 
     <Switch
         android:id="@+id/switch_geschlecht"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="160dp"
         android:scrollbarStyle="insideInset"
         android:shadowColor="@color/green"
         android:text="@string/string_Junge"
@@ -114,6 +106,7 @@
         android:textColorLink="@color/green"
         android:textStyle="bold"
         android:thumbTint="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,13 +115,29 @@
         android:layout_width="wrap_content"
         android:layout_height="34dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="44dp"
         android:text="@string/string_Maedchen"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/switch_geschlecht"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_Groeße"
+        app:layout_constraintStart_toStartOf="@+id/txt_Größe"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Größe" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_Gewicht"
+        app:layout_constraintStart_toStartOf="@+id/txt_Gewicht"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Gewicht" />
 
 
 </android.support.constraint.ConstraintLayout>
