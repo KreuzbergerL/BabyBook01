@@ -13,7 +13,7 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="72dp"
         android:layout_gravity="end"
 
 
@@ -22,7 +22,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="20dp"
+            android:layout_width="32dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="2dp"
-            android:background="@mipmap/constraint_backgrnd_same"
+            android:background="@mipmap/constrained_backgrnd_graugruen7"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -46,6 +46,9 @@
 
             <TextView
                 android:id="@+id/textView"
+                android:textColor="@color/dunkelgrün"
+                android:textStyle="bold"
+                android:textSize="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -58,6 +61,8 @@
 
             <TextView
                 android:id="@+id/textView2"
+                android:textSize="14dp"
+                android:textColor="@color/dunkelgrün"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

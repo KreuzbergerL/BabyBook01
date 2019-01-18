@@ -12,6 +12,9 @@
     <color name="orange">#ffa500</color>
     <color name="blue">#5cacee</color>
     <color name="ToolBarGreen">#00c78c</color>
-    <color name="EditTextBackgroung">#dcdcdc</color>
+    <color name="EditTextBackgroung">#f4f4f4</color>
+    <color name="grey1">#d5d5d7</color>
+    <color name="textfield_darkblue">#177E89</color>
+    <color name="dunkelgrün">#468372</color>
 
 </resources>

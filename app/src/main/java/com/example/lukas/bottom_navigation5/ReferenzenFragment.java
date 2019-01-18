@@ -129,8 +129,8 @@ public class ReferenzenFragment extends Fragment {
 
 
                 ////////// Größe des Babys je anch Monat einstellen //////////
-                icon.getLayoutParams().height = ( 2 * i ) + 200;
-                icon.getLayoutParams().width = ( 2 * i ) + 200;
+                icon.getLayoutParams().height = ( 8 * i ) + 200;
+                icon.getLayoutParams().width = ( 8 * i ) + 200;
                 icon.requestLayout();
 
             }

@@ -9,11 +9,8 @@
 
     <CalendarView
         android:id="@+id/calendarView3"
-        android:layout_width="wrap_content"
+        android:layout_width="362dp"
         android:layout_height="303dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,24 +21,26 @@
         android:layout_width="124dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="52dp"
         android:backgroundTint="@color/green"
         android:clickable="true"
         android:text="@string/Abspeichern"
-        android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Tagebucheintrag" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_Tagebucheintrag"
+        app:layout_constraintVertical_bias="0.49" />
 
     <EditText
         android:id="@+id/txt_Tagebucheintrag"
         android:layout_width="346dp"
         android:layout_height="88dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="28dp"
         android:background="@color/EditTextBackgroung"
         android:clickable="true"
         android:ems="10"
@@ -49,8 +48,8 @@
         android:inputType="textMultiLine"
         android:singleLine="false"
         android:textColorLink="@color/green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/calendarView3"
+        app:layout_constraintStart_toStartOf="@+id/calendarView3"
         app:layout_constraintTop_toBottomOf="@+id/calendarView3" />
 
 </android.support.constraint.ConstraintLayout>

@@ -33,17 +33,32 @@ public class PrefManager {
     ///////////////////////////////////////////////LUKI/////////////////////////////////////////////////////////////////////////////
 
 
-    public void SaveBirthDate(String Datum)
+    public void SaveBirthDate(int day, int month, int year)
     {
         SharedPreferences sharedPreferences = context.getSharedPreferences("Geburtsdatum", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("Tag", Datum);
+        editor.clear();
+        editor.putInt("day", day);
+        editor.putInt("month", month);
+        editor.putInt("year", year);
         editor.apply();
     }
 
-    public int getBirthDate()
+    public int getDay_Frag()
     {
         SharedPreferences sharedPreferences = context.getSharedPreferences("Geburtsdatum", Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("Tag", 0);
+        return sharedPreferences.getInt("day", 0);
+    }
+
+    public int getMonth_Frag()
+    {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("Geburtsdatum", Context.MODE_PRIVATE);
+        return sharedPreferences.getInt("month", 0);
+    }
+
+    public int getYear_Frag()
+    {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("Geburtsdatum", Context.MODE_PRIVATE);
+        return sharedPreferences.getInt("year", 0);
     }
 }

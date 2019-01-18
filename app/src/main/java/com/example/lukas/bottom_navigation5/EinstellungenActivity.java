@@ -2,6 +2,7 @@ package com.example.lukas.bottom_navigation5;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -28,16 +29,26 @@ public class EinstellungenActivity extends AppCompatActivity {
     public String date;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_einstellungen);
 
+///////////////////////////////////////////////////////Letzte Eingabe anzeigen//////////////////////////////////////////////
+        int day = new PrefManagerActivity(context).getDay_Act();
+        String d = Integer.toString(day);
+        int month = new PrefManagerActivity(this).getMonth_Act();
+        String m = Integer.toString(month);
+        int year = new PrefManagerActivity(this).getYear_Act();
+        String y = Integer.toString(year);
+        String AusgabeDatum = d + "." + m + "." + y;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         DatumsAnzeige = (TextView) findViewById(R.id.date_display);
         mDisplayDate = (TextView) findViewById(R.id.tvDate);
         sharedPrefdatum = context.getSharedPreferences("name_datum", MODE_PRIVATE);
+
+DatumsAnzeige.setText(AusgabeDatum);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,9 +74,10 @@ public class EinstellungenActivity extends AppCompatActivity {
                 month = month + 1;
                 Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
-                date = month + "/" + day + "/" + year;
+                date = day + "." + month + "." + year;
                save(day, month, year);
                DatumsAnzeige.setText(date);
+                startActivity(new Intent(EinstellungenActivity.this, MainActivity.class));
             }
 
 
@@ -80,10 +92,11 @@ public void save(int day, int month, int year)
 }
 
 
-
-
-
 }
+
+
+
+
 
 
 

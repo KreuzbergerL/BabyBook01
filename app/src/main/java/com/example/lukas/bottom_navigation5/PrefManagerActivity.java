@@ -28,19 +28,19 @@ public class PrefManagerActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    public int getDay()
+    public int getDay_Act()
     {
         SharedPreferences sharedPreferences = context.getSharedPreferences("Geburtsdatum", Context.MODE_PRIVATE);
         return sharedPreferences.getInt("day", 0);
     }
 
-    public int getMonth()
+    public int getMonth_Act()
     {
         SharedPreferences sharedPreferences = context.getSharedPreferences("Geburtsdatum", Context.MODE_PRIVATE);
         return sharedPreferences.getInt("month", 0);
     }
 
-    public int getYear()
+    public int getYear_Act()
     {
         SharedPreferences sharedPreferences = context.getSharedPreferences("Geburtsdatum", Context.MODE_PRIVATE);
         return sharedPreferences.getInt("year", 0);
